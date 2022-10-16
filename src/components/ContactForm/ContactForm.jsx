@@ -12,6 +12,13 @@ class ContactForm extends Component {
     this.setState({ [name]: value });
   };
 
+  resetState = () => {
+    this.setState({
+      name: '',
+      number: '',
+    });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSubmit({
@@ -19,14 +26,7 @@ class ContactForm extends Component {
       name: this.state.name,
       number: this.state.number,
     });
-    this.reset();
-  };
-
-  reset = () => {
-    this.setState({
-      name: '',
-      number: '',
-    });
+    this.resetState();
   };
 
   render() {

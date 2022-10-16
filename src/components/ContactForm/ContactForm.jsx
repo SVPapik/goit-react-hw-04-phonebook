@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 
 class ContactForm extends Component {
   state = {
@@ -13,7 +14,11 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    this.props.onSubmit({
+      id: nanoid(),
+      name: this.state.name,
+      number: this.state.number,
+    });
     this.reset();
   };
 

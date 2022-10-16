@@ -4,6 +4,7 @@ import ContactForm from './ContactForm';
 class App extends Component {
   state = {
     contacts: [],
+    name: '',
   };
 
   formSubmitHandler = data => {

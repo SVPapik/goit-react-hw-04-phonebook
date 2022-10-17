@@ -38,7 +38,7 @@ export const BtnAdd = styled.button`
   border-radius: 8px;
   filter: drop-shadow(1px 2px 1px black);
   padding: 8px;
-  box-shadow: rgba(30, 3, 230, 0.45) 0px -23px 25px 0px inset,
+  box-shadow: rgba(7, 195, 67, 0.45) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,

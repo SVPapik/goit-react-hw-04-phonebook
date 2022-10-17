@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
+import { Item, Contact, BtnDelete } from './ContactItem.styled';
 
 const ContactItem = ({ nanoid, name, number, deleteContact }) => {
   return (
     <>
-      <li key={nanoid}>
-        <p>
+      <Item key={nanoid}>
+        <Contact>
           {name}: {number}
-        </p>
-      </li>
-      <button type="button" onClick={() => deleteContact(nanoid)}>
-        Delete
-      </button>
+        </Contact>
+        <BtnDelete type="button" onClick={() => deleteContact(nanoid)}>
+          Delete
+        </BtnDelete>
+      </Item>
     </>
   );
 };

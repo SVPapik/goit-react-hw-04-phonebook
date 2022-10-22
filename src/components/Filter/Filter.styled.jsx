@@ -15,6 +15,7 @@ export const FilterInput = styled.input`
   border-radius: 6px;
   border: none;
   outline: none;
+  background-color: #f3e6fc;
   filter: drop-shadow(1px 2px 1px rgb(88, 73, 209));
   &:hover,
   :focus {

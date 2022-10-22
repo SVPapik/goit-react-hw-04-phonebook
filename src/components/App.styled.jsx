@@ -5,6 +5,7 @@ export const Container = styled.div`
   margin: 16px auto;
   padding: 16px;
   border-radius: 4px;
+  background-color: #fff;
   box-shadow: rgba(88, 73, 209, 0.45) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,

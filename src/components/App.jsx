@@ -27,12 +27,6 @@ class App extends Component {
       : this.setState(({ contacts }) => ({
           contacts: [newContact, ...contacts],
         }));
-
-    // contacts.includes(this.name)
-    //   ? alert(`${name} is already in contacts`)
-    //   : this.setState(({ contacts }) => ({
-    //       contacts: [newContact, ...contacts],
-    //     }));
   };
 
   deleteContact = nanoid => {

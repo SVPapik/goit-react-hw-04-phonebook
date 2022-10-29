@@ -4,6 +4,7 @@ import ContactList from './ContactList';
 import Filter from './Filter';
 import { nanoid } from 'nanoid';
 import { Container, Title, TitleSecondary } from './App.styled';
+// import { useState } from 'react';
 class App extends Component {
   state = {
     contacts: [

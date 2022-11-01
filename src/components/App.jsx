@@ -4,6 +4,7 @@ import ContactList from './ContactList';
 import Filter from './Filter';
 import { nanoid } from 'nanoid';
 import { Container, Title, TitleSecondary } from './App.styled';
+import { getFromLocalStorage, setToLocalStorage } from 'utils/localstorage';
 
 const App = () => {
   const baseContacts = [
@@ -12,15 +13,14 @@ const App = () => {
     { id: 'id-3', name: 'Oleksandr Repeta', number: '645-17-79' },
     { id: 'id-4', name: 'Vitaliy Lyakh', number: '093-974-92-77' },
   ];
-  const parsedContacts = JSON.parse(localStorage.getItem('contacts'));
 
   const [contacts, setContacts] = useState(
-    () => parsedContacts ?? baseContacts
+    () => getFromLocalStorage('contacts') ?? baseContacts
   );
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    setToLocalStorage('contacts', contacts);
   }, [contacts]);
 
   const addNewContact = ({ name, number, id = nanoid() }) => {

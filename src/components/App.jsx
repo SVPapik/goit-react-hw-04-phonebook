@@ -6,14 +6,14 @@ import { nanoid } from 'nanoid';
 import { Container, Title, TitleSecondary } from './App.styled';
 import { getFromLocalStorage, setToLocalStorage } from 'utils/localstorage';
 
-const App = () => {
-  const baseContacts = [
-    { id: 'id-1', name: 'Elon Musk', number: '459-12-56' },
-    { id: 'id-2', name: 'Artem Barabash', number: '443-89-12' },
-    { id: 'id-3', name: 'Oleksandr Repeta', number: '645-17-79' },
-    { id: 'id-4', name: 'Vitaliy Lyakh', number: '093-974-92-77' },
-  ];
+const baseContacts = [
+  { id: 'id-1', name: 'Elon Musk', number: '459-12-56' },
+  { id: 'id-2', name: 'Artem Barabash', number: '443-89-12' },
+  { id: 'id-3', name: 'Oleksandr Repeta', number: '645-17-79' },
+  { id: 'id-4', name: 'Vitaliy Lyakh', number: '093-974-92-77' },
+];
 
+const App = () => {
   const [contacts, setContacts] = useState(
     () => getFromLocalStorage('contacts') ?? baseContacts
   );
